@@ -1,0 +1,24 @@
+{
+  "name": "GuessIt",
+  "version": "1.0.0",
+  "description": "This is a simple and exciting game which is all depends on luck.",
+  "main": "script.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinsahu/GuessIt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinsahu/GuessIt/issues"
+  },
+  "homepage": "https://github.com/robinsahu/GuessIt#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
