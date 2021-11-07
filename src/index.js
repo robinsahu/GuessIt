@@ -11,6 +11,8 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 const current0El = document.getElementById("current--0");
 const current1El = document.getElementById("current--1");
+const winner0El = document.querySelector(".winner--0");
+const winner1El = document.querySelector(".winner--1");
 
 let scores, currentScore, activePlayer, playing;
 
@@ -30,6 +32,8 @@ const init = function () {
   player1El.classList.remove("player--winner");
   player0El.classList.add("player--active");
   player1El.classList.remove("player--active");
+  winner0El.classList.add("hidden");
+  winner1El.classList.add("hidden");
 };
 init();
 
@@ -50,7 +54,7 @@ btnRoll.addEventListener("click", function () {
 
     // 2. Display dice
     diceEl.classList.remove("hidden");
-    diceEl.src = `./static/assets/dice-${dice}.png`;
+    diceEl.src = `dice-${dice}.png`;
 
     // 3. Check for rolled 1
     if (dice !== 1) {
@@ -82,6 +86,9 @@ btnHold.addEventListener("click", function () {
       // Finish the game
       playing = false;
       diceEl.classList.add("hidden");
+      document
+        .querySelector(`.winner--${activePlayer}`)
+        .classList.remove("hidden");
 
       document
         .querySelector(`.player--${activePlayer}`)
