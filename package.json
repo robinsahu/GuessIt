@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "This is a simple and exciting game which is all depends on luck.",
   "main": "script.js",
-  "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/robinsahu/GuessIt.git"
